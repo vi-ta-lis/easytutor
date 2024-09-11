@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/enroll.css">
+    <title>Enroll</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>EASYTUTOR</h1>
+        </div>
+        <nav>
+            <ul>
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./about.html">About</a></li>
+             <li><a href="enroll.html">Enroll</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="maincon">
+        <div class="container">
+            <h1>Enroll</h1>
+        <form action="form" id="teacherForm">
+            <div class="left">
+                <label for="">First Name</label>
+                <input type="text" id="firstName" required>
+                <br>
+                <label for="">Last Name</label>
+                <input type="text" id="lastName" required>
+                <br>
+                <label for="">Email address</label>
+                <input type="text" id="email" required>
+                <br>
+                <label for="">Date of Birth</label>
+                <input type="date" id="dob" required>
+                <br>
+                <label for="">Sex</label>
+                <select id="sex">
+                    <option value="">MALE</option>
+                    <option value="">FEMALE</option>
+                    <option value="">OTHER</option>
+                </select>
+                <br>
+                <label for="">Class</label>
+                <select id="class">
+                    <option value="">Class 7</option>
+                    <option value="">Class 8</option>
+                    <option value="">Class 9</option>
+                    <option value="">Class 10</option>
+                    <option value="">Class 11 </option>
+                    <option value="">Class 12</option>
+                </select>
+                        </div>
+                        <div class="right">
+                            <br>
+                            <label for="" >Phone Number</label>
+                            <input type="text" id="phoneNumber"  required>
+                            <br>
+                            <label for="">Country</label>
+                            <input type="text" id="country" required>
+                            <br>
+                            <label for="">Password</label>
+                            <input type="password" id="password" required>
+                            <br>
+                            <label for="">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required>
+                            <br>
+                            <label for="">When Should Lessons Start?</label>
+                            <input type="date" id="lessonStart" required>
+                            <br>
+                            <label for="">How did you hear about us?</label>
+                            <select id="howHear">
+                                <option value="">Social Media</option>
+                                <option value="">Friend</option>
+                                <option value="">Advertisement</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+        </form>
+        <div class="under">
+            <div class="labels">
+                <label for="">Tell us about you</label>
+                <textarea name="" id="aboutYou"></textarea>
+            </div>
+            <div class="submitBtn" id="submitBtn">
+                <button> Become a teacher</button>
+            </div>
+           </div>
+        </div>
+    </div>
+    <a href="studentprofile.html" id="autoClickButton"><button>Lets Go</button></a>
+    <script src="./js/enroll.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="css/teacher.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>EASYTUTOR</h1>
+        </div>
+        <nav>
+            <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="./about.html">About</a></li>
+             <li><a href="enroll.html">Enroll</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://www.example.com/teacher-image.jpg" alt="Teacher's Profile Picture"> 
+            <div>
+                <h1 id="name">Jeremy Rose</h1>
+                <p>RANKINGS: 8.6</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button>Send Message</button>
+            <button>&check; Contacts</button>
+            <button>Report User</button>
+        </div>
+
+        <div class="section">
+            <h2>About teacher</h2>
+            <p id="about"></p>
+        </div>
+
+        <div class="section">
+            <h2>CONTACT INFORMATION</h2>
+            <p id="number"></p>
+            <p id="location"></p>
+            <p id="email"></p>
+            <p><a href="https://www.christianity.com/#google_vignette">site</a></p>
+            <p id="dob"></p>
+            <p id="Gender"></p>
+        </div>
+
+        <div class="section">
+            <h2>SUBJECT</h2>
+            <p id="SUBJECT"></p>
+        </div>
+
+        <div class="btn-container">
+            <a href="mailto:chidiebereonyekachi8@gmail.com">Contact Teacher</a>
+            <a href="lesson.html">Start Class</a>
+        </div>
+    </div>
+    <script>
+        function displayFormData() {
+            const formDataJSON = localStorage.getItem('formData');
+            
+            if (formDataJSON) {
+                const formData = JSON.parse(formDataJSON);
+
+                const container = document.getElementById('formDataContainer');
+
+                console.log(formData)
+
+                document.getElementById("name").innerHTML = formData.fullName
+                document.getElementById("about").innerHTML = formData.aboutYou
+                document.getElementById("number").innerHTML = `Phone Number: ${formData.phoneNumber}`
+                document.getElementById("location").innerHTML = `Country: ${formData.country}`
+                document.getElementById("email").innerHTML = `Email: ${formData.email}`
+                document.getElementById("dob").innerHTML = `Date of Birth: ${formData.dob}`
+                document.getElementById("Gender").innerHTML = `Gender: ${formData.sex}`
+                document.getElementById("SUBJECT").innerHTML = formData.subject
+            } 
+
+
+        }
+
+        displayFormData();
+    </script>
+</body>
+</html>

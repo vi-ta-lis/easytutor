@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .notes-section {
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .button-container {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tutorial Page</h1>
+
+    <div class="video-container">
+      <video controls>
+        <source src="video/y2mate.com - Darkoo ft Rema  FAVOURITE GIRL OFFICIAL REMIX VIDEO_480.mp4" type="video/mp4">
+
+      </video>
+    </div>
+
+    <div class="notes-section">
+      <h2>Your Notes</h2>
+      <textarea id="notes" placeholder="Type your notes here..."></textarea>
+      <div class="button-container">
+        <button id="saveNotes">Save Notes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/lesson.js"></script>
+</body>
+</html>

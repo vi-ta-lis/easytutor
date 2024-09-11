@@ -1,0 +1,704 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+body{
+    font-size: 32px;
+    background-color: red;
+}
+/* nave bar */
+/* General styles for desktop */
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(14, 80, 6);
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1{
+    color: white;
+}
+
+h1 {
+    font-family: cursive;
+    color: white;
+    font-size: 0.7em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding-right: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 10px;
+    transition: 0.7s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.5625em;
+    transition: color 0.3s;
+
+}
+
+nav ul li a:hover {
+    color: lightgreen;
+}
+
+nav .right-contact {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: white;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: static;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav .right-contact {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav ul li{
+        padding: 5px;
+        transition: 0.7s ease;
+    }
+}
+    nav ul li:hover{
+        background-color: #4CAF50;
+    }
+
+/* For even smaller devices (phones) */
+@media (max-width: 480px) {
+    body{
+        font-size: 30px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    nav ul {
+        column-gap: 10px;
+    }
+
+    nav .right-contact {
+        font-size: 14px;
+    }
+       nav ul li{
+        transition: 0.7s ease;
+    }
+    nav ul li:hover{
+        background-color: #4CAF50;
+    }
+}
+
+
+/* nave bar */
+
+
+/* my section */
+
+
+
+
+
+/* Enroll Section - Center Content */
+.enroll-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image - Fullscreen Responsive */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/little.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.6); /* Darken image for better text visibility */
+}
+
+/* Content Section - Floating Box */
+.content {
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 40px 60px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    z-index: 1;
+}
+
+/* Content - Headings and Paragraphs */
+h1 {
+    font-size: 1em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 0.8em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+.content ul li{
+    font-size: 0.7em;
+}
+
+/* Enroll Button */
+.enroll-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.enroll-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .content {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .enroll-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design for Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .enroll-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+/* my section */
+
+
+
+
+
+/* MAIN */
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container flex layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #4CAF50;
+}
+
+/* Left Text Section */
+.left-text {
+    flex: 1;
+    min-height: 100vh;
+    background-color: rgba(236, 213, 113, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left-text h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left-text h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Cursive';
+    margin-bottom: 20px;
+}
+
+.left-text button {
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.left-text button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.left-text button:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Right Image Section */
+.right-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+}
+
+.right-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .left-text {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left-text h2 {
+        font-size: 2rem;
+    }
+
+    .left-text h4 {
+        font-size: 1rem;
+    }
+
+    .left-text button {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .right-image {
+        width: 100%;
+    }
+
+    .right-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Media Query for Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .left-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .left-text h4 {
+        font-size: 1.1rem;
+    }
+
+    .left-text button {
+        width: 60%;
+    }
+}
+
+/*COURSE*/
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Courses Heading Styling */
+.courses h4 {
+    text-align: center;
+    padding-top: 4%; /* Percentage-based padding for responsiveness */
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2%; /* Responsive margin */
+}
+
+/* Box Container Styling */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%; /* Percentage-based gap */
+    justify-content: center; /* Center the boxes */
+    margin-top: 3%; /* Responsive margin */
+    padding: 2%; /* Padding for layout control */
+}
+
+/* Individual Box Styling */
+.box-container .box {
+    flex: 1 1 30%; /* Box flex for responsiveness */
+    position: relative;
+    overflow: hidden;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border for modern look */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    width: 100px;
+    background-color: #4CAF50; /* Softer green color */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3%; /* Percentage-based padding */
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.box-container .box:hover {
+    transform: translateY(-2%); /* Hover effect with percentage */
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15); /* Hover shadow */
+}
+
+/* Icon Styling */
+.icon img {
+    display: block;
+    margin: 0 auto; /* Center the icon */
+    width: 25%; /* Responsive width for icons */
+    height: auto;
+    padding: 5%; /* Padding for layout control */
+}
+
+/* Box Content Styling */
+.box-content {
+    text-align: center;
+    padding: 4%; /* Added padding for spacing */
+    font-size: 1.1rem;
+    margin: 2% 0; /* Margin for spacing */
+    
+}
+
+/* Center Text in Box */
+.box-container .h3, .p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .box-container .box {
+        flex: 1 1 45%; /* Two boxes per row on tablets */
+    }
+
+    .icon img {
+        width: 30%; /* Adjust icon size for tablets */
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .box-container {
+        padding: 4%; /* Adjusted padding for mobile */
+    }
+
+    .box-container .box {
+        flex: 1 1 100%; /* Full width for mobile */
+        margin-bottom: 5%; /* Spacing between boxes */
+    }
+
+    .courses h4 {
+        font-size: 1.5rem; /* Adjusted heading size for mobile */
+    }
+
+    .box-content {
+        padding: 5%; /* Increased padding for smaller screens */
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    .icon img {
+        width: 35%; /* Responsive icon size for mobile */
+    }
+}
+
+/* SUBJECT */
+h5{
+    text-align: center;
+}
+
+/* CONTACT */
+/* Universal Reset */
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Modern font for better aesthetics */
+}
+
+/* Main Container */
+.div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 5%; /* Percentage-based padding for responsiveness */
+    background-color: black; /* Light green background */
+    text-decoration: none;
+}
+
+/* Column Layout for div-1 */
+.div-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%; /* Adjust width for better responsiveness */
+    margin: 2% auto; /* Center vertically with auto margins */
+    margin-bottom: 20px;
+}
+
+/* Container for Sections within div-1 */
+.onecon {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Instagram Section */
+.instagram {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap items for better mobile layout */
+    gap: 2%; /* Adjusted gap for responsiveness */
+    margin-top: 3%; /* Space above Instagram section */
+    height: 100px;
+}
+
+/* Instagram Images */
+.instagram img {
+    width: 15%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 2%; /* Padding for aesthetic spacing */
+    border-radius: 50%; /* Circular images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+/* Hover Effect for Instagram Images */
+.instagram img:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Styling for Headers */
+.div-2 h3 {
+    font-size: 1.2rem; /* Adjusted font size for headers */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Anchor Links in div-1 */
+.div-1 a {
+    text-decoration: none;
+    /* color: #3498db; Soft blue for links */
+    font-size: 1.2rem; /* Font size for readability */
+    margin-top: 10%; /* Space between links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover Effect for Links */
+.div-1 a:hover {
+    color: #1abc9c; /* Change color on hover */
+}
+
+/* Last Container Styling */
+.lastcontainer {
+    margin-bottom: 30px;
+}
+
+.onecon, .div-2{
+    margin-top: -2%;
+}
+.onecon, .div-1 p{
+    color: white;
+}
+
+.lastcontainer a {
+    text-decoration: none;
+    /* Same link color as above */
+    font-size: 1.2rem; /* Font size for consistency */
+    margin-top: 10%; /* Space between links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+
+/* Hover Effect for Last Container Links */
+.lastcontainer a:hover {
+    color: #1abc9c; /* Change color on hover */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .div {
+        flex-direction: column; /* Stack items on tablets */
+        padding: 4%; /* Adjusted padding for tablets */
+    }
+
+    .div-1 {
+        width: 80%; /* Wider div-1 for tablets */
+    }
+
+    .instagram img {
+        width: 20%; /* Adjusted image size for tablets */
+    }
+
+    .div-1 a, .lastcontainer a {
+        font-size: 1.1rem; /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .div {
+        flex-direction: column; /* Full-width stacking on mobile */
+        padding: 3%; /* Adjusted padding for mobile */
+    }
+
+    .div-1 {
+        width: 100%; /* Full width for mobile */
+        margin: 0 auto; /* Center content */
+    }
+
+    .instagram {
+        gap: 5%; /* Smaller gap for mobile */
+    }
+
+    .instagram img {
+        width: 25%; /* Larger image size for mobile */
+    }
+
+    .div-1 a, .lastcontainer a {
+        font-size: 1rem; /* Reduced font size for mobile readability */
+        margin-top: 5%; /* Adjusted margin for mobile */
+    }
+}
+
+
+body {
+    overflow-x: hidden;
+    background-color: black; /* Darker background for a sleek look */
+    color: black; /* Light text for contrast */
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registerasatutor.css">
+    <title>WELCOME</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>EASYTUTOR</h1>
+        </div>
+        <nav>
+            <ul>
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./about.html">About</a></li>
+             <li><a href="enroll.html">Enroll</a></li>
+             <li><a href="service.html">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>        
+    <div class="container">
+        <h1 style="font-size: 50px; font-family: 'Times New Roman', Times, serif;">REGISTER</h1>
+    <form action="form">
+        <div class="left">
+            <label for="">Full Name</label>
+            <input type="text" id="fullname">
+            <br>
+            <label for="">Email</label>
+            <input type="text" id="email">
+            <br>
+            <label for="">Date of Birth</label>
+            <input type="date" id="dob">
+            <br>
+            <label for="">Your Subject of Expertise</label>
+            <select>
+                <option value="">Mathematics</option>
+                <option value="">Chemistry</option>
+                <option value="">Physics</option>
+                <option value="">English</option>
+                <option value="">Biology</option>
+                <option value=""> Basic Science</option>
+                <option value="">Technical Drawing</option>
+                <option value="">Basic Technology</option>
+                <option value="">Computer Studies</option>
+                <option value="">Civic Education</option>
+                <option value="">Economics</option>
+                <option value="">Accounting</option>
+                <option value="">Fine Arts</option>
+                <option value="">Social Studies</option>
+                <option value="">Geography</option>
+                <option value="">Marketing</option>
+                <option value="">Commerce</option>
+                <option value="">MCT 351</option>
+            </select>
+            <br>
+            <label for="">Years Of Experience</label>
+            <input type="text" id="experience">
+            <br>
+            <label for="">Account number</label>
+            <input type="text" id="accountNumber">
+            <br>
+            <label for="">Name of Bank</label>
+            <input type="text" id="bankName">
+                    </div>
+                    <div class="right">
+                        <br>
+                        <label for="">Proof of Certification</label>
+                        <input type="file" id="certification" >
+                        <label for="">Phone Number</label>
+                        <input type="text" id="phoneNumber">
+                        <br>
+                        <label for="">Country</label>
+                        <input type="text" id="country">
+                        <br>
+                        <label for="">Password</label>
+                        <input type="password" id="password">
+                        <br>
+                        <label for="">Confirm Password</label>
+                        <input type="password" id="confirmPassword">
+                        <br>
+                        <label for="">Sex</label>
+                        <select>
+                            <option value="">MALE</option>
+                            <option value="">FEMALE</option>
+                            <option value="">OTHER</option>
+                        </select>
+                        <br>
+                        <label for="">How did you hear about us</label>
+                        <select>
+                            <option value="">Social Media</option>
+                            <option value="">Friend</option>
+                            <option value="">Advertisement</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+    </form>
+    <div class="under">
+        <div class="labels">
+            <label for="">Tell us about you</label>
+            <textarea name="" id=""></textarea>
+        </div>
+            <div class="btn">
+                    <button type="button" onclick="saveFormData()">SUBMIT</button>
+                </div>
+                <a href="teacher.html" id="autoClickButton"><button>Invisible</button></a>
+    </div>
+    <script>
+        function saveFormData() {
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                dob: document.getElementById('dob').value,
+                subject: document.getElementById('subject').value,
+                experience: document.getElementById('experience').value,
+                accountNumber: document.getElementById('accountNumber').value,
+                bankName: document.getElementById('bankName').value,
+                certification: document.getElementById('certification').files[0] ? document.getElementById('certification').files[0].name : '',
+                phoneNumber: document.getElementById('phoneNumber').value,
+                country: document.getElementById('country').value,
+                password: document.getElementById('password').value,
+                confirmPassword: document.getElementById('confirmPassword').value,
+                sex: document.getElementById('sex').value,
+                referral: document.getElementById('referral').value,
+                aboutYou: document.getElementById('aboutYou').value
+            };
+
+            const formDataJSON = JSON.stringify(formData);
+
+            localStorage.setItem('formData', formDataJSON);
+
+            alert('Form data saved successfully!');
+
+            const button = document.getElementById("autoClickButton");
+
+                function simulateClick() {
+                    button.click();
+                }
+
+            simulateClick()
+        }
+    </script>
+</body>
+</html>

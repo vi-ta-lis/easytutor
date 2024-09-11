@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="./css/studentprofile.css">
+  <style>
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <h1>EASYTUTOR</h1>
+    </div>
+    <nav>
+        <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="./about.html">About</a></li>
+         <li><a href="enroll.html">Enroll</a></li>
+         <li><a href="service.html">Services</a></li>
+         <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="profile-image">
+        <!-- <img src="img/profile.jpg" alt=""> -->
+      </div>
+      <div class="profile-info">
+        <h2 id="studentName" class="studentName">henry</h2>
+        <p id="location">New York, NY</p>
+        <p >Product Designer</p>
+        <p id="studentRank">Rankings: 8.6</p>
+      </div>
+      <div class="actions">
+        <button>Send Message</button>
+        <button>✓ Contacts</button>
+        <button class="report">Report User</button>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="section">
+        <h2 class="section-title">About</h2>
+        <p id="about">Jeremy is a product designer from New York who specializes in creating modern, user-friendly interfaces and designs.</p>
+      </div>
+
+      <!-- <div class="section">
+        <h2 class="section-title">Work</h2>
+        <p>Currently working at Spotify New York, previously worked at the Metropolitan Museum of Art.</p>
+      </div> -->
+
+      <div class="section">
+        <h2 class="section-title">Contact Information</h2>
+        <p id="PhoneNumber">Phone Number: (555) 123-4567</p>
+        <p id="Email">Email: jeremy.rose@email.com</p>
+        
+        <p>Address: University of nigeria nsukka</p>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Basic Information</h2>
+        <p id="Dob">Birthday: January 1, 1985</p>
+        <p id="Gender">Gender: Male</p>
+      </div>
+
+      <div class="section skills">
+        <h2 class="section-title">Subject You Want to Offer</h2>
+          <div class="subject-list">
+            <label><input type="checkbox" value="Mathematics" id="math"> Mathematics</label>
+            <label><input type="checkbox" value="English" id="english"> English</label>
+            <label><input type="checkbox" value="Biology" id="biology"> Biology</label>
+            <label><input type="checkbox" value="Physics" id="physics"> Physics</label>
+            <label><input type="checkbox" value="Chemistry" id="chemistry"> Chemistry</label>
+            <label><input type="checkbox" value="History" id="history"> History</label>
+            <label><input type="checkbox" value="Computer Science" id="computers"> Computer Science</label>
+            <label><input type="checkbox" value="Economics" id="economics"> Economics</label>
+            <label><input type="checkbox" value="Geography" id="geography"> Geography</label>
+            <label><input type="checkbox" value="Philosophy" id="philosophy"> Philosophy</label>
+            <label><input type="checkbox" value="Sociology" id="sociology"> Sociology</label>
+            <label><input type="checkbox" value="Political Science" id="political-science"> Political Science</label>
+            <label><input type="checkbox" value="Psychology" id="psychology"> Psychology</label>
+            <label><input type="checkbox" value="Art" id="art"> Art</label>
+            <label><input type="checkbox" value="Music" id="music"> Music</label>
+            <label><input type="checkbox" value="Drama" id="drama"> Drama</label>
+            <label><input type="checkbox" value="Physical Education" id="physical-education"> Physical Education</label>
+            <label><input type="checkbox" value="French" id="french"> French</label>
+            <label><input type="checkbox" value="Spanish" id="spanish"> Spanish</label>
+            <label><input type="checkbox" value="German" id="german"> German</label>
+            <label><input type="checkbox" value="Business Studies" id="business-studies"> Business Studies</label>
+            <label><input type="checkbox" value="Accounting" id="accounting"> Accounting</label>
+            <label><input type="checkbox" value="Marketing" id="marketing"> Marketing</label>
+            <label><input type="checkbox" value="Engineering" id="engineering"> Engineering</label>
+            <label><input type="checkbox" value="Law" id="law"> Law</label>
+            <label><input type="checkbox" value="Architecture" id="architecture"> Architecture</label>
+            <label><input type="checkbox" value="Astronomy" id="astronomy"> Astronomy</label>
+        </div>
+        <a href="teacher.html"><button id="SubmitBttn">View Teachers profile</button></a>
+        <p id="Subject">Your subjects</p>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  function loadTeacherData() {
+      const teacherDataString = localStorage.getItem('teacherData');
+
+
+      if (teacherDataString) {
+
+          const teacherData = JSON.parse(teacherDataString);
+
+ 
+          console.log(teacherData)
+          document.getElementById("studentName").innerHTML = `${teacherData.lastName} ${teacherData.firstName}`
+          document.getElementById("location").innerHTML = teacherData.country
+          document.getElementById("about").innerHTML = teacherData.aboutYou
+          document.getElementById("PhoneNumber").innerHTML = `Phone Number ${teacherData.phoneNumber}`
+          document.getElementById("Email").innerHTML = teacherData.email
+          document.getElementById("Dob").innerHTML = `Date of Birth: ${teacherData.dob}`
+          document.getElementById("Gender").innerHTML = `Gender: ${teacherData.sex}`
+          const teacherInfoDiv = document.getElementById('teacherInfo');
+
+      } else {
+          document.getElementById('teacherInfo').innerHTML = "No teacher data found.";
+      }
+  }
+
+
+  loadTeacherData();
+  document.addEventListener("click", () =>{
+      const selectedSubjects = [];
+      const checkboxes = document.querySelectorAll('.subject-list input[type="checkbox"]:checked');
+      console.log(checkboxes)
+
+      checkboxes.forEach(checkbox => {
+          selectedSubjects.push(checkbox.value);
+          console.log(selectedSubjects)
+      });
+      
+
+      function saveSubjectsToLocalStorage() {
+        localStorage.setItem('selectedSubjects', JSON.stringify(selectedSubjects));
+      }
+
+
+      function displaySubjects() {
+        const subjectsContainer = document.getElementById('subjectsContainer');
+
+        const savedSubjects = localStorage.getItem('selectedSubjects');
+        
+        if (savedSubjects) {
+          const subjectsList = JSON.parse(savedSubjects);
+          
+        } else {
+          subjectsContainer.textContent = "No subjects saved.";
+        }
+
+        document.getElementById("Subject").innerHTML = `Your Subjects are: ${savedSubjects}`
+      }
+
+      saveSubjectsToLocalStorage();
+      displaySubjects();
+  })
+  
+</script>
+</body>
+</html>

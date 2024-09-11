@@ -1,0 +1,188 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px; /* Changed to a more standard base size */
+    background-color: white;
+    font-family: Arial, sans-serif; /* Added a base font family */
+}
+
+/* Navbar Styles */
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(14, 80, 6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em; /* Changed to a relative unit for better scalability */
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-family: cursive;
+    color: white;
+    font-size: 1em; /* Adjusted for consistency */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    color: white;
+    padding: 8px 16px; /* Adjusted padding for better touch target */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent li */
+    font-size: 0.875em; /* Adjusted for better readability */
+}
+
+nav ul li:hover {
+    background-color: #4CAF50;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: static;
+    }
+
+    .logo {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 1em;
+        margin-bottom: 5px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav .right-contact {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Smaller Devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Reduced font size for very small screens */
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    nav ul li a {
+        font-size: 0.875em;
+    }
+
+    nav .right-contact {
+        font-size: 0.875em;
+    }
+}
+
+/* Services Section */
+.services-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.services-intro h1 {
+    font-size: 2.25em;
+    color: #004d00;
+    margin-bottom: 20px;
+}
+
+.services-intro p {
+    font-size: 1.125em;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.service-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #004d00;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.service-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Why Choose Section */
+.why-choose {
+    margin-top: 50px;
+}
+
+.why-choose h2 {
+    font-size: 1.75em;
+    color: #004d00;
+    margin-bottom: 20px;
+}
+
+.why-choose ul {
+    list-style-type: none;
+}
+
+.why-choose ul li {
+    margin-bottom: 15px;
+    font-size: 1.125em;
+}
+
+.why-choose ul li b {
+    color: #004d00;
+}
